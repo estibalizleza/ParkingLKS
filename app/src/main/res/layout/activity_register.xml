@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="150dp"
             android:fontFamily="sans-serif-black"
-            android:text="Registro Parking"
+            android:text="Registro"
             android:textAlignment="center"
             android:textSize="40sp"
             android:textStyle="bold"
