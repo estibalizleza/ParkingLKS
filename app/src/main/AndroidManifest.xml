@@ -9,10 +9,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ParkingBlue">
         <activity
-            android:name=".view.activity.RegisterActivity"
+            android:name="com.lksnext.ParkingELeza.view.activity.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".view.activity.LoginActivity"
+            android:name="com.lksnext.ParkingELeza.view.activity.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,7 +20,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".view.activity.MainActivity"
+            android:name="com.lksnext.ParkingELeza.view.activity.MainActivity"
             android:exported="true" />
     </application>
 

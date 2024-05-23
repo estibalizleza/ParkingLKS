@@ -1,4 +1,4 @@
-package com.lksnext.parkingplantilla.view.activity;
+package com.lksnext.ParkingELeza.view.activity;
 
 import android.os.Bundle;
 

@@ -1,4 +1,4 @@
-package com.lksnext.parkingplantilla.viewmodel;
+package com.lksnext.ParkingELeza.viewmodel;
 
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
