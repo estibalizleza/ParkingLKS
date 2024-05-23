@@ -1,10 +1,10 @@
-package com.lksnext.parkingplantilla.viewmodel;
+package com.lksnext.ParkingELeza.viewmodel;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import com.lksnext.parkingplantilla.domain.Callback;
+import com.lksnext.ParkingELeza.domain.Callback;
 
 public class RegisterViewModel extends ViewModel {
     // Aquí puedes declarar los LiveData y métodos necesarios para la vista de registro

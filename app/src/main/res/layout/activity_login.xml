@@ -149,7 +149,7 @@
         android:layout_marginTop="52dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/captura_de_pantalla_2024_04_24_181726__3_" />
+        app:srcCompat="@drawable/parking_icon" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

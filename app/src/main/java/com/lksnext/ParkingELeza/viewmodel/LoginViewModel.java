@@ -1,11 +1,11 @@
-package com.lksnext.parkingplantilla.viewmodel;
+package com.lksnext.ParkingELeza.viewmodel;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import com.lksnext.parkingplantilla.data.DataRepository;
-import com.lksnext.parkingplantilla.domain.Callback;
+import com.lksnext.ParkingELeza.data.DataRepository;
+import com.lksnext.ParkingELeza.domain.Callback;
 
 public class LoginViewModel extends ViewModel {
 
