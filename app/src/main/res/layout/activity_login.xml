@@ -5,15 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#E9F4F7"
-    tools:context=".view.activity.LoginActivity">
+    tools:context="com.lksnext.ParkingELeza.view.activity.LoginActivity">
 
 
     <Button
         android:id="@+id/loginButton"
         style="@style/Widget.Material3.Button.ElevatedButton"
         android:layout_width="280dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="100dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="65dp"
         android:backgroundTint="#1F141E1E"
         android:bufferType="normal"
         android:shadowColor="#1330D6"
@@ -81,26 +81,27 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/email"
         android:layout_width="280dp"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:layout_marginTop="25dp"
         android:hint="Email"
         android:inputType="text"
+        android:singleLine="true"
         android:textColorHint="#49454F"
         app:boxBackgroundColor="#FFFFFF"
         app:boxBackgroundMode="outline"
         app:boxStrokeColor="#2877B5"
         app:boxStrokeWidth="3dp"
+        app:endIconMode="clear_text"
+        app:errorEnabled="true"
         app:hintTextColor="#192342"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/title"
-        app:passwordToggleDrawable="@android:drawable/ic_menu_close_clear_cancel"
-        app:passwordToggleEnabled="true">
+        app:layout_constraintTop_toBottomOf="@id/title">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/emailText"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -110,7 +111,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="35dp"
         android:hint="Contraseña"
-        android:inputType="textEmailAddress"
+        android:inputType="text|textPassword"
+        android:singleLine="true"
         android:textColorHint="#49454F"
         app:boxBackgroundColor="#FFFFFF"
         app:boxBackgroundMode="outline"
@@ -136,7 +138,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/passwordText"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="70dp"
             android:inputType="textPassword" />
 
     </com.google.android.material.textfield.TextInputLayout>
