@@ -11,11 +11,27 @@
         tools:context=".view.activity.RegisterActivity">
 
 
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="52dp"
+            android:background="@color/white"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintBottom_toTopOf="@+id/email"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="@string/crear_cuenta"
+            app:titleMarginStart="82dp"
+            app:navigationIcon="?attr/actionModeCloseDrawable" />
+
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/email"
             android:layout_width="280dp"
             android:layout_height="70dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="108dp"
             android:hint="Email"
             android:textColorHint="#49454F"
             app:boxBackgroundColor="#FFFFFF"
@@ -26,14 +42,14 @@
             app:hintTextColor="#192342"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/title">
+            app:layout_constraintTop_toTopOf="parent">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/emailText"
                 android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:inputType="text|textEmailAddress"
-                android:singleLine="true"
-                android:layout_height="match_parent" />
+                android:singleLine="true" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -129,21 +145,6 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:fontFamily="sans-serif-black"
-            android:text="Registro Parking"
-            android:textAlignment="center"
-            android:textSize="40sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
         <com.google.android.material.button.MaterialButton
             style="@style/Widget.Material3.Button.ElevatedButton"
             android:layout_width="280dp"
@@ -153,7 +154,7 @@
             android:bufferType="normal"
             android:shadowColor="#1330D6"
             android:singleLine="false"
-            android:text="Crear Cuenta"
+            android:text="@string/crear_cuenta"
             android:textColor="#2877B5"
             android:textSize="14sp"
             android:textStyle="bold"
