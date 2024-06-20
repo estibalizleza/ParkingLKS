@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#E9F4F7"
-        tools:context=".view.activity.RegisterActivity">
+        tools:context="com.lksnext.ParkingELeza.view.activity.RegisterActivity">
 
 
         <androidx.appcompat.widget.Toolbar
