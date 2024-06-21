@@ -7,12 +7,11 @@
     android:layout_margin="10dp"
     tools:context="com.lksnext.ParkingELeza.view.fragment.MainFragment">
 
-    <SeekBar
-        android:id="@+id/seekBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="180dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Main window"
+        android:gravity="center"
+        android:textSize="35sp"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>

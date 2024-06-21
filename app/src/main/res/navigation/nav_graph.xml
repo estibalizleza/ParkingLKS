@@ -11,4 +11,10 @@
         android:label="@string/fragment_main"
         tools:layout="@layout/fragment_main">
     </fragment>
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="com.lksnext.ParkingELeza.view.fragment.UserFragment"
+        android:label="@string/fragment_user"
+        tools:layout="@layout/fragment_user">
+    </fragment>
 </navigation>
