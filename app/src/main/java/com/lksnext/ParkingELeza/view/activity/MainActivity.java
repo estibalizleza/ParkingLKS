@@ -1,6 +1,7 @@
 package com.lksnext.ParkingELeza.view.activity;
 
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -57,4 +58,10 @@ public class MainActivity extends AppCompatActivity {
     public boolean onSupportNavigateUp() {
         return NavigationUI.navigateUp(navController, appBarConfiguration) || super.onSupportNavigateUp();
     }
+
+    public void onAddButtonClick(View view) {
+        // Navigate to desired destination when FloatingActionButton is clicked
+        navController.navigate(R.id.mainFragment);
+    }
+
 }
