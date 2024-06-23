@@ -1,68 +1,66 @@
 package com.lksnext.ParkingELeza.view.activity;
 
 import android.os.Bundle;
-import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.navigation.NavController;
-import androidx.navigation.fragment.NavHostFragment;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
-import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.lksnext.ParkingELeza.view.fragment.DateFragment;
+import com.lksnext.ParkingELeza.view.fragment.MainFragment;
+import com.lksnext.ParkingELeza.view.fragment.UserFragment;
+import com.lksnext.ParkingELeza.view.fragment.reservationsFragment;
 import com.lksnext.parkingplantilla.R;
 import com.lksnext.parkingplantilla.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
-    BottomNavigationView bottomNavigationView;
     ActivityMainBinding binding;
-    NavController navController;
-    AppBarConfiguration appBarConfiguration;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        //Asignamos la vista/interfaz main (layout)
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        // Initial fragment setup
+        replaceFragment(new MainFragment());
 
-        //Con el NavigationHost podremos movernos por distintas pestañas dentro de la misma pantalla
-        NavHostFragment navHostFragment =
-            (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.flFragment);
-        navController = navHostFragment.getNavController();
+        // Configuración del clic del FloatingActionButton (FAB)
+        FloatingActionButton fab = binding.fab;
+        fab.setOnClickListener(view -> showBottomSheet());
 
-        //Asignamos los botones de navegacion que se encuentran en la vista (layout)
-        bottomNavigationView = binding.bottomNavigationView;
-        NavigationUI.setupWithNavController(bottomNavigationView, navController);
+        // Handling item selection in BottomNavigationView
+        binding.bottomNavigationView.setBackground(null); // Optional: to remove background
 
-        //Dependendiendo que boton clique el usuario de la navegacion se hacen distintas cosas
-        bottomNavigationView.setOnItemSelectedListener(item -> {
-            int itemId = item.getItemId();
-            if (itemId == R.id.newres) {
-                navController.navigate(R.id.mainFragment);
-                return true;
-            } else if (itemId == R.id.reservations) {
-                //TODO
-            } else if (itemId == R.id.person) {
-                navController.navigate(R.id.userFragment);
-                return true;
+        binding.bottomNavigationView.setOnItemSelectedListener(item -> {
+            switch (item.getItemId()) {
+                case R.id.newres:
+                    replaceFragment(new MainFragment());
+                    return true;
+
+                case R.id.person:
+                    replaceFragment(new UserFragment());
+                    return true;
+
+                case R.id.reservations:
+                    replaceFragment(new reservationsFragment());
+                    return true;
             }
             return false;
         });
     }
 
-    @Override
-    public boolean onSupportNavigateUp() {
-        return NavigationUI.navigateUp(navController, appBarConfiguration) || super.onSupportNavigateUp();
+    private void showBottomSheet() {
+        DateFragment bottomSheetFragment = new DateFragment();
+        bottomSheetFragment.show(getSupportFragmentManager(), bottomSheetFragment.getTag());
     }
-
-    public void onAddButtonClick(View view) {
-        // Navigate to desired destination when FloatingActionButton is clicked
-        navController.navigate(R.id.mainFragment);
+    private void replaceFragment(Fragment fragment) {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.frame_layout, fragment);
+        fragmentTransaction.commit();
     }
-
 }
