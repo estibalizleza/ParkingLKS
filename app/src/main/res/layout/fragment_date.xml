@@ -1,19 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="16dp"
-    tools:context=".view.fragment.DateFragment">
-
-    <TextView
-        android:id="@+id/textViewTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Seleccionar fecha"
-        android:textSize="18sp"
-        android:paddingBottom="8dp" />
+    android:padding="16dp">
 
     <DatePicker
         android:id="@+id/datePicker"
@@ -22,41 +12,11 @@
         android:datePickerMode="calendar"
         android:headerBackground="@color/background" />
 
-    <TextView
-        android:id="@+id/textViewTimeTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Seleccionar hora"
-        android:textSize="18sp"
-        android:paddingTop="16dp"
-        android:paddingBottom="8dp" />
-
-    <TimePicker
-        android:id="@+id/timePicker"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:timePickerMode="spinner" />
-
-    <TextView
-        android:id="@+id/textViewDurationTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Seleccionar duración"
-        android:textSize="18sp"
-        android:paddingTop="16dp"
-        android:paddingBottom="8dp" />
-
-    <SeekBar
-        android:id="@+id/seekBarDuration"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:max="24" />
-
     <Button
-        android:id="@+id/buttonConfirm"
+        android:id="@+id/buttonContinue"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Confirmar Reserva"
+        android:text="Continuar"
         android:layout_marginTop="16dp" />
 
 </LinearLayout>

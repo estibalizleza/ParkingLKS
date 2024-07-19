@@ -8,8 +8,8 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.lksnext.ParkingELeza.view.fragment.DateFragment;
 import com.lksnext.ParkingELeza.view.fragment.MainFragment;
+import com.lksnext.ParkingELeza.view.fragment.ParentFragment;
 import com.lksnext.ParkingELeza.view.fragment.UserFragment;
 import com.lksnext.ParkingELeza.view.fragment.reservationsFragment;
 import com.lksnext.parkingplantilla.R;
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Configuración del clic del FloatingActionButton (FAB)
         FloatingActionButton fab = binding.fab;
-        fab.setOnClickListener(view -> showBottomSheet());
+        fab.setOnClickListener(view -> showReservationBottomSheet());
 
         // Handling item selection in BottomNavigationView
         binding.bottomNavigationView.setBackground(null); // Optional: to remove background
@@ -53,10 +53,11 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void showBottomSheet() {
-        DateFragment bottomSheetFragment = new DateFragment();
+    private void showReservationBottomSheet() {
+        ParentFragment bottomSheetFragment = new ParentFragment();
         bottomSheetFragment.show(getSupportFragmentManager(), bottomSheetFragment.getTag());
     }
+
     private void replaceFragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();

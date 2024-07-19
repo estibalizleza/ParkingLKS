@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.DatePicker;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -13,20 +12,25 @@ import androidx.fragment.app.Fragment;
 
 import com.lksnext.parkingplantilla.R;
 
-public class DateFragment extends Fragment {
+public class SpaceFragment extends Fragment {
 
-    private DatePicker datePicker;
-    private Button buttonContinue;
+    private Button buttonConfirm, buttonBack;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_date, container, false);
+        View view = inflater.inflate(R.layout.fragment_space, container, false);
 
-        datePicker = view.findViewById(R.id.datePicker);
-        buttonContinue = view.findViewById(R.id.buttonContinue);
+        buttonConfirm = view.findViewById(R.id.buttonConfirm);
+        buttonBack = view.findViewById(R.id.buttonBack);
 
-        buttonContinue.setOnClickListener(v -> {
+        buttonConfirm.setOnClickListener(v -> {
+            // Confirm reservation logic
+            // ...
+            ((ParentFragment)getParentFragment()).confirmReservation();
+        });
+
+        buttonBack.setOnClickListener(v -> {
             ((ParentFragment)getParentFragment()).goToTimeFragment();
         });
 
